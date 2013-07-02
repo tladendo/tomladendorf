@@ -32,7 +32,6 @@ html, body { height: 100%; }
 body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
   text-align: center;
 }
 
@@ -47,7 +46,6 @@ body {
 .pagetitle {
   font-weight: normal;
   font-family: Chunk;
-  font-height: 10px;
 }
 
 .postindex {
@@ -149,10 +147,40 @@ a:hover {
   color: #000;
 }
 
+#content {
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+  font-family: Chunk;
+}
+
 a.extra {
-  float: right;
   text-decoration: none;
-  margin-left: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+hr.mini {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+}
+
+#rightmost {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+#extras {
+  float: right;
 }
 
 .site .meta {
@@ -170,6 +198,7 @@ a.extra {
 
 .footer hr {
   margin-bottom: .8em;
+  margin-top: 3.5em;
 }
 
 .site .footer .contact {
@@ -193,9 +222,19 @@ a.extra {
 
 /*****************************************************************************/
 /*
+/* Container
+/*
+/*****************************************************************************/
+
+/*****************************************************************************/
+/*
 /* Posts
 /*
 /*****************************************************************************/
+
+.post h1, h2, h3, h4, h5, h6 {
+  font-family: Chunk;
+}
 
 .post pre {
   border: 1px solid #ddd;

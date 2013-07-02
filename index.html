@@ -1,13 +1,21 @@
 ---
 layout: default
-title: Tom Ladendorf
 ---
 
-<div id="home">
-  <h2 class="postindex">Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date: "%B %d, %Y" }} -></span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<p>
+  Welcome to my personal website. On the top right, you can find links that will give you
+  more information about me, as well as an archive of my past blog posts.
+</p>
+
+<p>
+  Below is my most recent blog post, which is about {{ site.posts.last.about }}.
+</p>
+
+<hr class="mini" />
+
+<h2 class="pagetitle">{{ site.posts.last.title }}</h2>
+<p class="meta">Posted on {{ site.posts.last.date | date: "%B %d, %Y" }}</p>
+
+<div class="post">
+{{ site.posts.last.content }}
 </div>
