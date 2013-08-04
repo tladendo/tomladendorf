@@ -6,25 +6,17 @@ categories: javascript scheme
 about: "writing a Scheme interpreter in Javascript"
 ---
 
-Even at my school, where it serves as a sort of lingua franca for CS students,
-the [Scheme](https://en.wikipedia.org/wiki/Scheme_%28programming_language%29)
-programming language is often denigrated as being useless, ugly, or hard to
-read. Those of us on the other side of the fence, myself included, find it
-instructive, aesthetically pleasing, and occasionally of practical use. This post,
-however, is *not* about a practical use of Scheme. It's about writing a tiny
-Lisp interpreter for fun. It seems like everyone is doing this right now, but my
-inspiration for this interpreter does not come from another interpreter on the
-web; rather, it comes from the first interpreter I wrote for [Dan
+One thing that excites me about Javascript its amenability to functional
+programming concepts. This, in conjunction with the similarity between
+Javascript's arrays and Lisp's lists, got me thinking about writing a tiny
+interpreter in Javascript. The inspiration for this came from [Dan
 Friedman](http://www.cs.indiana.edu/~dfried/)'s
-[Programming Languages class](https://cgi.soic.indiana.edu/~c311/doku.php) at IU.
+[Programming Languages class](https://cgi.soic.indiana.edu/~c311/doku.php) at
+IU, which I took last year. In the class, we wrote several tiny Scheme
+interpreters in Scheme, one of which was only three lines. This is the
+interpreter I decided to translate to Javascript.
 
-## In Scheme
-
-When Professor Friedman lectures, he makes a concerted effort to blow the minds
-of his students. The novelty of having a small epiphany every lecture is
-something that gradually wore off for me, but when I first saw the "3 line"
-Scheme interpreter, I was floored. Suddenly, the real power of Scheme's (Lisp's)
-lists clicked.
+## The Three-Line Interpreter
 
 {% highlight scheme %}
 (define value-of
@@ -35,20 +27,32 @@ lists clicked.
       [,x (env exp)])))
 {% endhighlight %}
 
+In three lines, we have an interpreter that can handle lambdas, lambda
+applications, and variables. There's not a whole lot you can do with this, but
+it's an extremely terse foundation for an interpreter that proffers a lot of
+learning opportunities. In Dan's class, for instance, we used this interpreter
+to explore and understand [lexical
+scoping](https://en.wikipedia.org/wiki/Lexical_scope#Lexical_scoping) and
+different [evaluation strategies](https://en.wikipedia.org/wiki/Evaluation_strategy). 
+To understand it, we first need to know a little bit about how pmatch works
 (pmatch is written by Oleg Kiselyov, and can be found
 [here](http://www.cs.indiana.edu/cgi-pub/c311/lib/exe/fetch.php?media=pmatch.scm).
-It's a simple pattern matcher that behaves in a really intuitive way.)
+In short, pmatch matches on a pattern that is in the form of a list or a symbol
+and gives you access to any of the variables you have preceded with a comma
+(`,`). So, on the first line of the `pmatch` expression above, `(lambda (,x)
+,body)` will match any list that satisfies these three constraints:
 
-Utility-wise, this interpreter can't do much. It can only evaluate
-single-argument lambdas, applications of these lambdas, and variables that
-exist in the environment. But it can do all of this in a mere three lines, and
-each line you add to it will extend this functionality further. This interpreter
-can be written so concisely because Scheme (Lisp) is
-[homoiconic](https://en.wikipedia.org/wiki/Homoiconic); i.e., its
-programs can be represented by one of its data structures (lists), and
-vice-versa. With the help of pmatch, parsing code represented by these data
-structures is fairly straightforward. Here are some examples of programs the
-interpreter can run:
+1. Its first element is the symbol `'lambda`.
+2. Its second element is a list.
+3. It contains 3 elements.
+
+If these three conditions are satisfied, then the second half of that line of
+the pmatch will evaluate (to the exclusion of the other lines) and we will have
+access to the variables `x` and `body`, which will refer to the symbols/lists
+that `,x` and `,body` matched.
+
+
+
 
 {% highlight scheme %}
 
