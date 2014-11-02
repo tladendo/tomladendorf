@@ -30,7 +30,7 @@ assemble evidence in favor of this counterpoint would be to judge far too
 quickly. You see, this is not simply a matter of vocabular convergence between
 languages following social contact between distinct linguistic groups; it goes
 far, far beyond that. It is a matter of syntactic and grammatical convergence
-as well, and it has absolutely nothing to do with contact between cultures.
+as well, and it has *absolutely nothing to do with contact between cultures.*
 Using written, historical evidence, along with linguistic models of ancestor
 languages, linguists have now demonstrated that these three types of
 convergence began long before the major world cultures made contact with one
