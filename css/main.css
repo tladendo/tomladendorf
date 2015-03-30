@@ -159,6 +159,11 @@ a:hover {
   font-family: Chunk;
 }
 
+#content h3 {
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+
 a.extra {
   text-decoration: none;
   margin-left: 5px;
