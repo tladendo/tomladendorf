@@ -3,8 +3,8 @@ layout: default
 ---
 
 <h2 class="pagetitle">{{ site.posts.last.title }}</h2>
-<p class="meta">Posted on {{ site.posts.last.date | date: "%B %d, %Y" }}</p>
+<p class="meta">Posted on {{ site.posts.first.date | date: "%B %d, %Y" }}</p>
 
 <div class="post">
-{{ site.posts.last.content }}
+{{ site.posts.first.content }}
 </div>
