@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "lifetime piling up"
-date:   2016-07-08 03:14:15
+title:  "thoughts following last weeks murders"
+date:   2016-07-14 03:14:15
 categories: blog
-about: "big data"
+about: "violence"
 ---
 
 
