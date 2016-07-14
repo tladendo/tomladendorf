@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "the presidential lecture of the arts and sciences"
-date:   2014-11-02 03:14:15
+date:   2014-11-02
 categories: lecture
 about: causation
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "so what's it like to be a computer?"
-date:   2015-03-30 03:14:15
+date:   2015-03-30
 categories: computer
 about: computer
 ---

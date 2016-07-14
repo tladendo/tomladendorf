@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "lifetime piling up"
-date:   2016-07-08 03:14:15
+date:   2016-07-08
 categories: blog
 about: "big data"
 ---

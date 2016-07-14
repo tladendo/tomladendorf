@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "the dream's dream"
-date:   2015-04-07 03:14:15
+date:   2015-04-07
 categories: simulation
 about: simulation
 ---
