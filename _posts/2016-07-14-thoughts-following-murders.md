@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "thoughts following last weeks murders"
+title:  "thoughts following last weeks' murders"
 date:   2016-07-14 03:14:15
 categories: blog
 about: "violence"
