@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "thoughts on nationality"
-date:   2016-07-14
+date:   2016-08-01
 categories: blog
 about: "nationality"
 ---
