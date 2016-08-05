@@ -115,6 +115,12 @@ hr {
   background-color: black;
 }
 
+blockquote {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 90%;
+}
+
 .site .header h1.title a {
 }
 
