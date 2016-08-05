@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "songfulness"
-date:   2016-07-14
+date:   2016-07-25
 categories: blog
 about: "music"
 ---
